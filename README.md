@@ -23,10 +23,21 @@ Go to the project directory
   cd mml-api
 ```
 
+Create a virtual enviroment
+
+```bash
+python3 -m venv venv
+```
+
+Activating  virtual enviroment
+```bash
+source ./venv/bin/activate
+```
+
 Install dependencies
 
 ```bash 
-pip3/pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 get database dump from [here](https://drive.google.com/file/d/1FEAxzixt7Oxifq2UNBUppMvM6QIbL3Zd/view?usp=sharing)
