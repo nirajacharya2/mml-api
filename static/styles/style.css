@@ -1,0 +1,147 @@
+html {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: "Roboto", sans-serif;
+  }
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://imdb-api.com/img/header.jpg");
+    visibility: visible;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    background-repeat: no-repeat;
+    width: 80%;
+    background-position: center;
+    background-size: cover;
+    height: 10rem;
+    color: white;
+    font-weight: bold;
+  }
+  .bannerText {
+    text-align: center;
+    font-size: 1.5em;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(4, 4, 4, 0.5);
+    padding-bottom: 1em;
+  }
+  .bannerText > h1 {
+  }
+  .bannerText > h2 {
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* width: 80%; */
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    /* padding:0 10% 0 10% ; */
+  }
+  .content > h1 {
+    text-align: start;
+    align-items: center;
+  }
+  .usage {
+    text-align: start;
+    /* align-items: center; */
+  }
+  .apiDesc {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    word-wrap: break-word;
+  }
+  .desc {
+    background-color: #5e636e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 1rem;
+    margin: 1px;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .collapse {
+    display: none;
+  }
+  .url {
+    display: flex;
+    flex-direction: row;
+    padding: 1em 1em ;
+    border: 1px solid #39ff14;
+    border-radius: 1em;
+  }
+  .get {
+    color: #39ff14;
+    font-weight: 700;
+    padding-right: 1em;
+  }
+  .apiurl {
+  }
+  .explain{
+    margin: 1em 0 1em 0;
+  }
+  .example {
+    display: flex;
+    flex-direction: column;
+  }
+  .example>div{
+    font-size: 2em;
+    margin: 1em 0 1em 0;
+  }
+  .response {
+    border: 1px solid #39ff14;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
+    width: 100%;
+    border-radius: 1em;
+    padding-bottom: 1em;
+    margin-right: 1em;
+    /* margin:1em 0em 1em 0em; */
+  
+  }
+  
+  svg {
+    float: right;
+    width: 2rem;
+    height: 2rem;
+    pointer-events: none;
+  }
+  .upsideDown {
+    transform: rotate(180deg) scaleX(-1);
+  }
+  
+  a {
+    color: red;
+  }
+  a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  a:active {
+    text-decoration: none;
+  }@media screen and (max-width: 700px) {
+      .bannerText{
+          font-size: 1em;
+      }
+  }
+  

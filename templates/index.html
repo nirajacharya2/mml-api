@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Movie List Api</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/style.css') }}"
+    />
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/api.svg') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+    </style>
+    <script defer src="{{url_for('static', filename='js/main.js')}}"></script>
+  </head>
+  <body>
+    <main>
+      <div class="banner">
+        <div class="bannerText">
+          <h1>API Documentation</h1>
+          <h2>Documentation and Online Test</h2>
+        </div>
+      </div>
+      <div class="content">
+        <p>This is an API for My Movie List</p>
+        <h1 class="usage">Usage</h1>
+        {% for i in range(a|length) %}
+        <div class="apiDesc">
+          <div class="desc" onclick="expand(event)">
+            {{ a[i][0] }}
+            <svg
+              class="upsideDown"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 24 24"
+            >
+              <path fill="currentColor" d="m7 14l5-5l5 5z" />
+            </svg>
+          </div>
+          <div class="collapse">
+            <div class="explain">{{ a[i][3] }}</div>
+            <div class="url">
+              <span class="get">GET</span>
+              <a href="{{ a[i][1] }}" target="new" class="apiurl">
+                {{ a[i][1] }}</a
+              >
+            </div>
+            <div class="example">
+              <div>Example Response:</div>
+              <pre class="response"><code>{{ a[i][2] }}</code></pre>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </main>
+  </body>
+</html>
+
